@@ -127,7 +127,7 @@ a:hover {
 span {
     display: flex;
     gap: 25px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: var(--font-family-Karla);
     color: black;
     transition: all .8s ease;
@@ -423,6 +423,7 @@ legend, input {
         width: 100%;
         justify-items: center;
         gap: 12px;
+        padding-bottom: 30px;
         grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     }
     
@@ -437,8 +438,8 @@ legend, input {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding:1rem;
-        gap: 3.5rem;
+        padding: 2rem;
+        gap: 2rem;
     }
 
     .social-media {
@@ -453,6 +454,8 @@ legend, input {
 
     legend {
         padding-bottom: 0.5rem;
+        display: flex;
+        text-align: center;
     }
     
     fieldset > button {
@@ -468,7 +471,6 @@ legend, input {
 
     .newsletter {
         order: 3;
-
     }
 
 }
@@ -567,7 +569,7 @@ legend, input {
     }
     
     .menu > li {
-        padding: 15px;
+        padding-top: 12px;
     }
       
     .menu > li > span::after { 
@@ -590,8 +592,9 @@ legend, input {
     
     span {
         display: flex;
-        gap: 25px;
-        font-size: 12px;
+        gap: 20px;
+        padding: 0px 5px 0px 5px;
+        font-size: 8px;
         font-family: var(--font-family-Karla);
         color: black;
         transition: all .8s ease;
