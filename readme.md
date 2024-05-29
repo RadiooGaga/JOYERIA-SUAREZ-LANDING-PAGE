@@ -1,3 +1,3 @@
-Proyecto 1 PREWORK
+# PROYECTO 1 - PREWORK
 
-HTML Y CSS para RockTheCode
+Landing page. Proyecto con HTML Y CSS, prework RockTheCode.
