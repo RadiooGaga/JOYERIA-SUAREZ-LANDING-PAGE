@@ -16,6 +16,27 @@ html, body {
     --color-two: rgb(171, 144, 84);
 }
 
+a:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.todas:hover {
+    cursor: pointer;
+    color: var(--color-two);
+}
+
+.special::after {
+    content: "|";
+}
+
+.suscribete {
+    color: black;
+}
+
+.suscribete:hover {
+    color: var(--color-two);
+}
 
 
 @media screen and (min-width: 801px)  {
@@ -24,6 +45,7 @@ html, body {
         position: fixed;  
         top:0;
         width: 100%;
+        height: auto;
         background-color: white;
         z-index: 100;
     }
@@ -100,7 +122,7 @@ html, body {
     }
 
     .menu > li {
-        padding: 15px;
+        padding: 10px;
     }
 
     .menu > li:hover > ul {
@@ -113,6 +135,10 @@ html, body {
         content: "|";  
     }
 
+    .menu > li > a::after { 
+        content: "|";  
+    }
+
     .last::after {
         visibility: hidden;
     }
@@ -122,12 +148,7 @@ html, body {
         color: rgb(171, 144, 84);
     }
 
-    a:hover {   
-        cursor: pointer;
-        color: rgb(171, 144, 84);
-    }
-
-    span {
+    span, .special {
         display: flex;
         gap: 25px;
         font-size: 16px;
@@ -154,36 +175,41 @@ html, body {
     }
 
     .banner-container {
+        position: relative;
         display: flex;
         width: 100%;
     }
 
     .leftpic {
-        width: 50%;
+        width: 100%;
         object-fit:cover;
-    }
-
-    .rightpic {
-        width: 50%;
-        object-fit: cover;
     }
 
     .cta-principal {
         display: flex;
-        position: absolute;
         justify-content: center;
-        background-color: #0000006e;
+        align-items: center;
+        width: 250px;
+        height: 50px;
+        display: flex;
+        position: absolute;
+        top: 35%;
+        left: 2%;
+        justify-content: center;
+        background-color: #00000055;
         border-color: transparent;
-        right: 39%;
-        left: 39%;
+        border-radius: 5px;
+        font-size: 16px;
+        color: white;
     }
 
     .cta-box {
         display: flex;
+        height: auto;
         text-align: center;
         justify-content: center;
         background-color: black;
-        padding: 25px;
+        padding: 10px;
     }
 
     button {
@@ -197,7 +223,7 @@ html, body {
         color: white;
         border-color:transparent;
         font-family: karla;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 300;
     }
 
@@ -268,7 +294,7 @@ html, body {
         padding: 5px;
     }
 
-    legend, input {
+    .suscribete, input {
         padding: 5px;
         font-family:var(--font-family-Karla);
     }
@@ -360,12 +386,7 @@ html, body {
         color: rgb(171, 144, 84);
     }
     
-    a:hover {   
-        cursor: pointer;
-        color: rgb(171, 144, 84);
-    }
-    
-    span {
+    span, .special {
         display: block;
         padding: 10px;
         color: black;
@@ -376,8 +397,7 @@ html, body {
     .banner-container {
         position: relative;
         width: 100%;
-        height: 450px;
-        bottom: 2rem;  
+        height: auto;
     }
     
     .leftpic {
@@ -385,12 +405,7 @@ html, body {
         position: relative;
         object-fit:contain;
     }
-    
-    .rightpic {
-        display: none;
-        visibility: hidden;
-    }
-
+     
     button {
         background-color: black;
         padding: 12px;
@@ -484,7 +499,7 @@ html, body {
         border-color: transparent;
     }
 
-    legend {
+    .suscribete {
         padding-bottom: 0.5rem;
         display: flex;
         text-align: center;
@@ -625,12 +640,7 @@ html, body {
         color: rgb(171, 144, 84);
     }
     
-    a:hover {   
-        cursor: pointer;
-        color: rgb(171, 144, 84);
-    }
-    
-    span {
+    span, .special {
         display: flex;
         gap: 20px;
         padding: 0px 5px 0px 5px;
@@ -639,6 +649,7 @@ html, body {
         color: black;
         transition: all .8s ease;
     }
+
     
     .submenu {
         display: none;
@@ -659,36 +670,38 @@ html, body {
     
     .banner-container {
         display: flex;
+        height: auto;
         width: 100%;
     }
     
     .leftpic {
-        width: 50%;
+        width: 100%;
         object-fit:cover;
     }
-    
-    .rightpic {
-        width: 50%;
-        object-fit: cover;
-    }
+     
     
     .cta-principal {
         display: flex;
         width: 100%;
+        height: 60px;
         position: absolute;
-        justify-content: center;
-        background-color: #0000006e;
+        align-items: center;
+        justify-content: end;
+        background-color: #00000033;
         border-color: transparent;
-       
+        color: white;
+        font-size: 12px;
+        padding-right: 30px;
     }
     
     .cta-box {
         display: flex;
         width: 100%;
+        height: auto;
         text-align: center;
         justify-content: center;
         background-color: black;
-        padding: 10px;
+        padding: 5px;
     }
     
     button {
@@ -706,14 +719,14 @@ html, body {
         font-weight: 300;
     }
     
-    .gallery-container { 
+    .gallery-container {
         display: grid;
         width: 100%;
-        padding: 2em 1em;
         justify-items: center;
         text-align: center;
         gap: 10px;
         grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+        padding: 10px;
     }
 
     .gallery-container > div {
@@ -722,7 +735,6 @@ html, body {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 390px;
         padding-bottom: 30px;
         background-color: whitesmoke;
     }
@@ -765,7 +777,7 @@ html, body {
         padding: 5px;
     }
     
-    legend, input {
+    .suscribete, input {
         padding: 5px;
         font-family:var(--font-family-Karla);
     }
